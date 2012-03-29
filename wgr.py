@@ -32,9 +32,11 @@ class MainPage(webapp.RequestHandler):
 
 	gifts = Gift.all().order('order_value')
 
+	auth = self.request.get('turin')
 
 	template_values = {
-		'auth': users.is_current_user_admin(),
+#		'auth': users.is_current_user_admin(),
+		'auth': auth,
 		'user':user,
 		'gifts': gifts
 	}

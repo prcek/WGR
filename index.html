@@ -6,12 +6,28 @@
 	gift: {{ gift.name }} <a href="{{ gift.url }}">zde</a> 
 	{% if gift.reserved %}
 		uz rezervovano
+
 	{% else %}
 		<form method="post">
 			<input type="hidden" name="action" value="res">
 			<input type="hidden" name="key" value="{{gift.key}}">
 			<input type="submit" value="rezervovat">	
 		</form>
+	{% endif %}
+	{% if auth %}
+		<form method="post">
+			<input type="hidden" name="action" value="del">
+			<input type="hidden" name="key" value="{{gift.key}}">
+			<input type="submit" value="smazat">	
+		</form>
+		{% if gift.reserved %}
+		<form method="post">
+			<input type="hidden" name="action" value="unres">
+			<input type="hidden" name="key" value="{{gift.key}}">
+			<input type="submit" value="odrezervovat">	
+		</form>
+		{% endif %}
+	
 	{% endif %}
 	<br/>
 	{% endfor %}
@@ -20,6 +36,9 @@
 	<hr>
 	<form method="post">
 		<input type="hidden" name="action" value="add">
+		<input type="text" name="name" value="polozka xyz">
+		<input type="text" name="url" value="http://www.xyz.xx/xxx.html">
+		<input type="text" name="order_value" value="0">
 		<input type="submit" value="pridat">	
 	</form>
 	{% endif %}
