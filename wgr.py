@@ -19,9 +19,24 @@ class MainPage(webapp.RequestHandler):
 	logging.info('action='+a)
 	if (a == 'add'):
 		gift = Gift(url='xxx',name='tddd')
-		gift.url='xxx'	
-		gift.name='tsss'
+		gift.url=self.request.get('url')
+		gift.name=self.request.get('name')
+		gift.order_value=int(self.request.get('order_value'))
 		gift.put()
+	k = self.request.get('key')
+	key = db.Key(k)	
+	gift = Gift.get(key)	
+	logging.info(gift.name)
+	if a == 'res':
+		gift.reserved=True	
+		gift.put()
+	if a == 'unres':
+		gift.reserved=False
+		gift.put()
+	if a == 'del':
+		gift.delete()
+
+
 
 
 	self.redirect('/')
