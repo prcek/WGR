@@ -1,4 +1,13 @@
 <html>
+<script LANGUAGE="JavaScript">
+<!--
+function ask(n)
+{
+var a=confirm("Opravdu rezervovat '"+n+"' ?");
+if (a) return true ; else return false ;
+}
+// -->
+</script>
 <body>
 
 	prehled:<br>
@@ -11,7 +20,7 @@
 		<form method="post">
 			<input type="hidden" name="action" value="res">
 			<input type="hidden" name="key" value="{{gift.key}}">
-			<input type="submit" value="rezervovat">	
+			<input type="submit" value="rezervovat" onclick="return ask('{{gift.name}}');">	
 		</form>
 	{% endif %}
 	{% if auth %}
