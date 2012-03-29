@@ -15,13 +15,16 @@ class Gift(db.Model):
 
 class MainPage(webapp.RequestHandler):
     def post(self):
-	logging.info('post')
-	gift = Gift(url='xxx',name='tddd')
-	gift.url='xxx'	
-	gift.name='tsss'
-	gift.put()
-	self.redirect('/')
+	a = self.request.get('action')
+	logging.info('action='+a)
+	if (a == 'add'):
+		gift = Gift(url='xxx',name='tddd')
+		gift.url='xxx'	
+		gift.name='tsss'
+		gift.put()
 
+
+	self.redirect('/')
 
     def get(self):
 
