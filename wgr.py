@@ -34,6 +34,7 @@ class MainPage(webapp.RequestHandler):
 
 
 	template_values = {
+		'auth': users.is_current_user_admin(),
 		'user':user,
 		'gifts': gifts
 	}

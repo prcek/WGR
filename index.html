@@ -3,7 +3,7 @@
 
 	prehled:<br>
 	{% for gift in gifts %}
-	<b> gift: {{ gift.name }} <a href="{{ gift.url }}">zde</a> 
+	gift: {{ gift.name }} <a href="{{ gift.url }}">zde</a> 
 	{% if gift.reserved %}
 		uz rezervovano
 	{% else %}
@@ -13,14 +13,16 @@
 			<input type="submit" value="rezervovat">	
 		</form>
 	{% endif %}
-	 </b><br/>
+	<br/>
 	{% endfor %}
 
+	{% if auth %}
 	<hr>
 	<form method="post">
 		<input type="hidden" name="action" value="add">
 		<input type="submit" value="pridat">	
 	</form>
+	{% endif %}
 
 </body>
 </html>
