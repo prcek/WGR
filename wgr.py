@@ -23,6 +23,9 @@ class MainPage(webapp.RequestHandler):
 		gift.name=self.request.get('name')
 		gift.order_value=int(self.request.get('order_value'))
 		gift.put()
+		self.redirect('/?turin=1')
+		return
+		
 	k = self.request.get('key')
 	key = db.Key(k)	
 	gift = Gift.get(key)	
@@ -30,6 +33,9 @@ class MainPage(webapp.RequestHandler):
 	if a == 'res':
 		gift.reserved=True	
 		gift.put()
+		self.redirect('/')
+		return
+		
 	if a == 'unres':
 		gift.reserved=False
 		gift.put()
