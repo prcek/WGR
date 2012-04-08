@@ -17,6 +17,7 @@
 </script>
 
 </head>
+<body>
 	<div id="page">
 		<div id="header">
 			<h1>Svatební dary</h1>
@@ -41,16 +42,5 @@
 			</ul>
 		</div>
 		<div id="footer">&copy; 2012</div>
-	{% if auth %}
-	<form method="post">
-		<input type="hidden" name="action" value="add">
-		<input type="text" name="name" value="polozka xyz">
-		<input type="text" name="url" value="http://www.xyz.xx/xxx.html">
-		<input type="text" name="order_value" value="0">
-		<input type="submit" value="pridat">	
-	</form>
-	{% endif %}
-
 	</div>
 </body>
-</html>

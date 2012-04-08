@@ -1,0 +1,43 @@
+/*CSS reset*/
+html,body								{margin: 0;padding: 0;font-family: "Arial CE",Arial,"Helvetica CE",Helvetica,sans-serif;color:#000000;background:#FFFFFF}
+html									{font-size:106.5%}
+body									{font-size:76.5%}
+table									{font-size:100%}
+a										{color:#0000CC}
+a:hover									{color:#0000CC}
+a:visited								{color:#0000CC}
+img 									{border:0; margin:0; padding: 0;}
+.cleaner,.clear 						{clear:both;display: block;height:1px;font-size:1px;visibility:hidden;overflow:hidden}
+.hide,.blind 							{position:absolute;left:-1000px;top:-1000px;width:1px;height:1px;overflow:hidden}
+.noDisplay 								{display:none}
+.clear hr 								{display: none}
+a 										{text-decoration: underline;outline:none}
+p,img,table,tr,th,td,form,fieldset,
+dl,dt,dd,h1,h2,h3,h4,h5 				{border: 0px none;margin: 0px;padding: 0px}
+ul,li,ol 								{padding: 0px;margin: 0px;list-style-type: none}
+h1,h2,h3,h4,h5 							{font-size:150%;font-weight:normal}
+
+
+body									{ background: url("../images/bg-body.jpg") repeat scroll 50% 0 #E9E9E9; }
+#page									{ width:960px; margin:0 auto; }
+#header									{ background: #574a3a; padding: 30px 30px 0; position: relative; height:300px;}
+
+#header h1								{ font-family: 'Oleo Script', Arial, cursive; font-size: 50px; color:#FFF;}
+#header .imgBox 						{ border:1px solid #CCC; padding:5px 5px 3px; background:#FFF; position: absolute;}
+#header img 							{ width:888px; margin:0px auto; }
+
+#content								{ background: #FFF; padding:100px 30px 30px; }
+#content ul 							{ width:800px; margin:0 auto; }
+#content ul li 							{ background: url('../images/bg-box-long.png') no-repeat; padding: 20px 21px; margin-bottom:20px; -moz-transition: box-shadow 0.5s ease 0s; border-radius: 5px 5px 5px 5px; box-shadow: 0 0 3px rgba(0, 0, 0, 0.3); }
+#content ul li:hover	 				{ box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); }
+#content ul li img 						{ float:left; }
+#content ul li .giftNameBox				{ display: block; width:547px; height:20px; overflow: hidden; float:left; padding: 11px 21px; }
+
+a.giftName								{ font-family: Georgia,"Times New Roman",Times,serif; font-size:25px; color:#3D3D3D; text-decoration:underline;}
+a.giftReservation 						{ background:#92b048; border: 1px solid #92b048; border-radius: 5px 5px 5px 5px; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); color: #FFFFFF; display: inline-block;font-size: 20px; padding: 5px 17px 6px; text-decoration:none; font-family: 'Oleo Script', Arial, cursive; float:left; margin-top:6px; }
+
+a.giftReservation:hover 				{ background:#000; border-color:#000; }
+
+.giftReserved 							{ background:#999; border: 1px solid #999; border-radius: 5px 5px 5px 5px; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); color: #FFFFFF; display: inline-block;font-size: 20px; padding: 5px 11px 6px; text-decoration:none; font-family: 'Oleo Script', Arial, cursive; float:left; margin-top:6px; width:95px;}
+
+#footer									{ background:#574a3a; padding:20px 30px; color:#FFF; font-family: 'Oleo Script', Arial, cursive; }
