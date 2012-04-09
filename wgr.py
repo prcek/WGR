@@ -10,7 +10,9 @@ class Gift(db.Model):
     name = db.StringProperty(required=True)
     url = db.StringProperty(required=True)	
     reserved = db.BooleanProperty(default=False)
+    nores = db.BooleanProperty(default=False)
     order_value = db.IntegerProperty(default=0)
+    
 
 
 class MainPage(webapp.RequestHandler):
@@ -22,6 +24,7 @@ class MainPage(webapp.RequestHandler):
 			gift.url=self.request.get('url')
 			gift.name=self.request.get('name')
 			gift.order_value=int(self.request.get('order_value'))
+			gift.nores = False
 			gift.put()
 			self.redirect('/?turin=1')
 			return

@@ -30,11 +30,19 @@
 				<li>
 					<img src="images/gift.png" alt="" />
 					<span class="giftNameBox"><a href="{{ gift.url }}" class="giftName" target="_blank">{{ gift.name }}</a></span>
+					
+					{% if gift.nores %}
+						<span class="giftReserved">Bez&nbsp;rezervace</span>
+					{% else %}
+					
+					
 					{% if gift.reserved %}
 						<span class="giftReserved">Rezervováno</span>
 					{% else %}
 						<a href="?action=res&amp;key={{gift.key}}" class="giftReservation" onclick="return ask('{{gift.name}}');">Rezervovat</a>
 					{% endif %}
+					{% endif %}
+
 					<div class="cleaner"></div>
 				</li>
 				{% endfor %}
